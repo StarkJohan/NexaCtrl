@@ -171,7 +171,7 @@ void NexaCtrl::Transmit(int pulse_length) {
         {
             //timing critical start
 #ifdef ARDUINO_ARCH_ESP8266
-            InterruptLock lock;
+            esp8266::InterruptLock lock;
 #else
             noInterrupts();
 #endif
